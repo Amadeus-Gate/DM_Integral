@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GestorDeCursos.SeguimientosDeCursoPage">
+    <StackLayout>
+        <Label Text="SEGUIMIENTO" HorizontalOptions="Center" TextColor="black" FontSize="Large"/>
+
+        <Entry x:Name="txtId" IsVisible="false"/>
+        <Picker Title="Nombre de Empleado" x:Name="txtNombre" SelectedIndexChanged="TxtNombre_SelectedIndexChanged" />
+        <Picker Title="Nombre de curso" x:Name="txtCurso" />
+        <Entry x:Name="txtLugar" Placeholder="Lugar del curso" />
+        <DatePicker x:Name="txtFecha"/>
+        <TimePicker x:Name="txtHora"/>
+        <Picker x:Name="pickerEstatus" Title="Estatus">
+            <Picker.Items>
+                <x:String>Programado</x:String>
+                <x:String>En Progreso</x:String>
+                <x:String>Completo</x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry x:Name="txtCalificacion" Placeholder="Calificacion"/>
+
+        <Button x:Name="BtnGuardarSeguimiento" Text="Guardar Seguimiento" Clicked="BtnGuardarSeguimiento_Clicked" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+        <Button x:Name="BtnActualizar" Text="Actualizar" Clicked="BtnActualizar_Clicked" IsVisible="False" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+        <Button x:Name="BtnTerminar" Text="Terminar Curso" Clicked="BtnTerminar_Clicked" IsVisible="False" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+
+        <ListView x:Name="lstSeguimiento" ItemSelected="lstSeguimiento_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding IdEmpleado}" Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
+                            <Label Text="{Binding NombreDelEmpleado}" Grid.Row="0" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding NombreDelCurso}" Grid.Row="0" Grid.Column="2" TextColor="Blue"/>
+                            <Label Text="{Binding LugarDelCurso}" Grid.Row="0" Grid.Column="3" TextColor="Blue"/>
+                            <Label Text="{Binding Fecha}" Grid.Row="0" Grid.Column="4" TextColor="Orange"/>
+                            <Label Text="{Binding Hora}" Grid.Row="0" Grid.Column="5" TextColor="Green"/>
+                            <Label Text="{Binding Estatus}" Grid.Row="0" Grid.Column="6" TextColor="Red"/>
+                            <Label Text="{Binding Calificacion}" Grid.Row="0" Grid.Column="7" TextColor="Red"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+

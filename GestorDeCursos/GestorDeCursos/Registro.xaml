@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GestorDeCursos.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="¡REGISTRATE!" HorizontalOptions="Center" TextColor="black" FontSize="Large"/>
+            <Label Text=""/>
+
+            <Label Text="Ingresa un correo electrónico" FontSize="Medium" TextColor="Black"/>
+            <Entry Placeholder="example@gmail.com" x:Name="txtEmailReg" Keyboard="Email"/>
+            <Label Text="Ingresa una contraseña" FontSize="Medium" TextColor="Black"/>
+            <Entry Placeholder="********" x:Name="txtContraReg"/>
+            <Label Text="Ingresa tu nombre" FontSize="Medium" TextColor="Black"/>
+            <Entry Placeholder="Nombre completo" x:Name="txtNombreReg"/>
+            <Label Text="Ingresa tu edad" FontSize="Medium" TextColor="Black"/>
+            <Entry Placeholder="Edad" x:Name="txtEdadReg" Keyboard="Numeric"/>
+
+            <Button Text="Registrar" Clicked="Btn_Registrar" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+            <Label Text=""/>
+            <Label Text="Amadeus;Gate Copyright 2023" HorizontalOptions="Center"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorDeCursos.CapturarFoto">
+    <StackLayout>
+
+        <Label Text="¡COMENCEMOS POR UNA FOTO!" HorizontalOptions="Center" TextColor="Black" FontSize="Large"/>
+
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Foto"/>
+            <Button Text="TOMAR FOTO" x:Name="TomarFoto" Clicked="TomarFoto_Clicked" IsVisible="true" Grid.Row="1" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+            <Button Text="CONTINUAR" x:Name="BtnContinuar" Clicked="BtnContinuar_Clicked" IsVisible="False" Grid.Row="1" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+            </Grid>
+        </StackLayout>
+</ContentPage>

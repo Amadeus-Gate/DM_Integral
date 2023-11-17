@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorDeCursos.Login">
+
+    <StackLayout>
+        <Label Text="¡BIENVENIDO!" HorizontalOptions="Center" TextColor="black" FontSize="Large"/>
+        <Label Text="Por favor, ingresa tus datos" HorizontalOptions="Center" TextColor="black" FontSize="Large"/>
+        <Label Text=""/>
+
+        <Label Text="Correo Electrónico" TextColor="Black" FontSize="Medium"/>
+            <Entry Placeholder="Ingresa aquí tu email" x:Name="txtEmailLogin" />
+        <Label Text="Contraseña" TextColor="Black" FontSize="Medium"/>
+            <Entry Placeholder="Ingresa aquí tu contraseña" x:Name="txtContraLogin" IsPassword="True" />
+
+            <Button Text="INICIAR SESIÓN" Clicked="LoginBtn" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+            <Label Text="¿Aun no tienes una cuenta?" HorizontalOptions="Center" TextColor="black" FontSize="Medium"/>
+        <Button x:Name="BtnRegistrarse" Text="REGISTRARSE" Clicked="BtnRegistrarse_Clicked" CornerRadius="50" BackgroundColor="LightSkyBlue"/>
+        <Label Text=""/>
+        <Label Text="Amadeus;Gate Copyright 2023" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
